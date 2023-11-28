@@ -1,0 +1,14 @@
+syntax = "proto3";
+package greet;
+
+service Cats {
+  rpc Meow(MeowRequest) returns (MeowReply);
+}
+
+message MeowRequest {
+  string name = 1;
+}
+
+message MeowReply {
+  string reply = 1;
+}
